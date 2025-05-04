@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Load Balancer Test</title>
+</head>
+<body>
+  <h1>Hello! This is a test page.</h1>
+  <p id="hostname"></p>
+
+  <script>
+    fetch('/whoami')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('hostname').innerText = data;
+      });
+  </script>
+</body>
+</html>
