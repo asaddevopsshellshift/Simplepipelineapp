@@ -24,3 +24,4 @@ artifacts:
     - public/**/*
     - scripts/**/*
 
+   name: "my-deployment-artifact"
