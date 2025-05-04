@@ -3,15 +3,15 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies...
+      - echo "Installing dependencies"
       - cd simple-app
-      - npm install  # Install dependencies from package.json
+      - npm install
   build:
     commands:
-      - echo Build complete. Your app is ready for deployment.
-  post_build:
-    commands:
-      - echo Build completed on `date`
+      - echo "Build started on `date`"
+      - npm run build
+
 artifacts:
+  base-directory: simple-app
   files:
-    - '**/*'  # Include all files in the build artifact for deployment
+    - '**/*'
