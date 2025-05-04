@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - npm install  # Install dependencies from package.json
+  build:
+    commands:
+      - echo Build complete. Your app is ready for deployment.
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'  # Include all files in the build artifact for deployment
